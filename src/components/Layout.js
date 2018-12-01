@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'bulma/css/bulma.min.css'
+
 import Header from './layout/Header'
 
 class Layout extends React.Component {
