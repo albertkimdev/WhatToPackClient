@@ -1,11 +1,3 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# What to pack app
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
-
-Or [view the live demo here](https://gatsby-starter-blog-demo.netlify.com/).
-
-## Running in development
-`gatsby develop`
+@TODO improve the searching for places to stay UX better...combine places like airbnb and other hotel sites and be able to search for a place to stay better...emphasize reviews or something...improve da ux. This is a new feature of this app...

@@ -1,0 +1,8 @@
+{
+  readCategories {
+    id
+    title
+    itemsCount
+    imgUrls
+  }
+}

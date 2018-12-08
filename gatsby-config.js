@@ -1,17 +1,39 @@
+require('dotenv')
+
+const endpoint =
+  process.env.NODE_ENV === 'production'
+    ? 'https://whattopackserver.herokuapp.com'
+    : 'http://localhost:4000'
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
+    title: 'What To Pack App',
+    author: 'What To Pack App',
+    description:
+      "Ever wonder if you're missing something to pack for your trip? Use this website to find all the items you need to pack for your next trip!.",
+    siteUrl: 'https://whattopack.app/',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
+    'gatsby-plugin-react-svg',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'queries',
+        path: `${__dirname}/src/queries/`,
+      },
+    },
+    {
+      resolve: '@wyze/gatsby-source-graphql',
+      options: {
+        url: endpoint,
       },
     },
     {
